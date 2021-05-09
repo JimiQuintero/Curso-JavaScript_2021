@@ -1,0 +1,22 @@
+({
+  "cadena": "Jimi",
+  "numero": "35",
+  "booleano": "true",
+  "arreglo": ["correr", "programar", "cocinar"],
+  "objeto": {
+    "twitter": "@jimidev",
+    "email": "jjimiq@gmail.com"
+  },
+  "nulo": null
+},
+{
+  "cadena": "Jimi",
+  "numero": 35,
+  "booleano": true,
+  "arreglo": ["correr", "programar", "cocinar"],
+  "objeto": {
+    "twitter": "@jimidev",
+    "email": "jjimiq@gmail.com"
+  },
+  "nulo": null
+})

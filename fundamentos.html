@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FUNDAMENTOS JAVASCRIPT</title>
+</head>
+<body>
+  <H1>FUNDAMENTOS DE JAVASCRIPT</H1>
+
+  <script>
+    // var hola = 'Hola'
+    // let hello = 'HELLO WORLD'
+    // console.log(hola);
+    // console.log(window);
+    // console.log("*************** Var ******************");
+    // var musica = 'Rock';
+    // console.log('Variable musica antes del bloque', musica);
+    // {
+    //   var musica = 'Pop'
+    //   console.log("Variable musica dentro del bloque", musica);
+    // }
+
+    // console.log('Variable musica despues del bloque', musica);
+    // console.log("*************** Let ******************");
+    // let musica2 = 'Rock';
+    // console.log('Variable musica antes del bloque', musica2);
+    // {
+    //   let musica2 = 'Pop'
+    //   console.log("Variable musica dentro del bloque", musica2);
+    // }
+
+    // console.log('Variable musica despues del bloque', musica2);
+
+    // CADENAS DE CARACTERES
+    // let nombre = "Jimi";
+    // let apellido = "QUINTERO";
+    // let saludo = new String("Hello World");
+    // console.log(
+    //   nombre.length, 
+    //   apellido.length, 
+    //   saludo.length,
+    //   nombre.toUpperCase(),
+    //   apellido.toLowerCase());
+    // let saludo2 = `Hola mi nombre es ${nombre} ${apellido}.`
+    // console.log(saludo2);
+
+    // funcionDeclarada();
+    
+    // function funcionDeclarada() {
+    //   console.log("Esto es una función declarada, puede invocarse en cualquier parte de nuestro código, incluso antes de que la función sea de clarada");
+    // }
+    
+    // // Función aninima
+    // const funcionExpresada = function () {
+    //   console.log("Esto es una función expresada, es decir, una función que se la ha asignado como valor a una varible, si invocamos esta función antes de su definnición JS nos dira.... Uncaught ReferenceError: Cannot access 'funcionExpresada' before initialization  ");
+    // }
+    // // funcionExpresada()
+
+    // // Arreglos
+    // const b = [1, true, "hola", ["A", "B", "C"]]
+    // console.log(b[3][2]);
+
+    // const c = Array.of("X", "Y", "Z", 9, 8, 7)
+    // console.log(c);
+
+    // // Arreglo con el mismo calor
+    // const d = Array(5).fill(false);
+    // console.log(d);
+
+    // OBJETOS
+    // const jimi = {
+    //   nombre: 'Jimi',
+    //   apellido: 'Quintero',
+    //   edad: 47,
+    //   soltero: false,
+    //   pasatiempos: ['cocinar', 'estudiar', 'escuchar musica'],
+    //   contacto: {
+    //     email: 'jjimiq@gmail.com',
+    //     celular: 3113519067,
+    //     site: 'https://jimidev.com.co'
+    //     },
+    //   saludar: function () {
+    //     console.log("Hello World");
+    //   },
+    //   decirMiNombre: function () {
+    //     console.log(`Hola mi nombre es: ${this.nombre} ${this.apellido} y tengo ${this.edad} años`);
+    //   }
+    // }
+
+    // Para acceder a la función que está dentro del objeto 
+    // jimi.decirMiNombre();
+    // console.log(Object.keys(jimi));
+    // console.log(Object.values(jimi));
+    // console.log(jimi.hasOwnProperty("telefono"));
+
+    // console.log(("9"===9) && ("9"===9));
+
+    // for (let i = 0; i <= 20; i++) {
+    //   console.log(i);  
+    // }
+      // Muestra el arreglo pero no lo recorre
+    // let numeros = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+    // for (numeros; numeros.length; numeros++){
+    //   console.log(numeros);
+    // }
+
+      // Recorre el arreglo
+    // let numeros2 = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+    // for (i=0; i < numeros2.length; i++){
+    //   console.log(numeros2[i]);
+    // }
+
+    // const datosPersonales = {
+    //   nombre: 'Jimi',
+    //   apellido: 'Quintero',
+    //   edad: 47,
+    //   soltero: false,
+    //   pasatiempos: ['cocinar', 'estudiar', 'escuchar musica'],
+    //   contacto: {
+    //     email: 'jjimiq@gmail.com',
+    //     celular: 3113519067,
+    //     site: 'https://jimidev.com.co'
+    //     },
+    //   saludar: function () {
+    //     console.log("Hello World");
+    //   },
+    //   decirMiNombre: function () {
+    //     console.log(`Hola mi nombre es: ${this.nombre} ${this.apellido} y tengo ${this.edad} años`);
+    //   }
+    // }
+    // Obtengo solo las propiedades del objeto
+    // for (const item in datosPersonales) {
+    //  console.log(datosPersonales.nombre);
+    // }
+    // Obtengo las propiedades con los valores den objeto
+    // for (const item in datosPersonales) {
+    //  console.log(`key: ${item}, Value: ${datosPersonales[item]}`);
+    // }
+
+   /************ FOR OF ************/ 
+  //  for (const elementos of numeros2) {
+  //    console.log(elementos);
+  //  }
+
+  //  MANEJO DE ERROR CON TRY - CATCH - FINALLY
+  //  Ejemplo sin error no se ejecuta el catch
+  // try {
+  //   console.log("ejemplo sin error");
+  // } catch (error) {
+  //   console.log("Se ejecuta cuando existe un error");
+  // } finally {
+  //   console.log("Siempre se ejecuta al final del bloque try-catch si hay o no hay error");
+  // }
+
+  // Ejemplo con un error aqui si se ejecuta el catch
+  // try {
+  //   console.log("ejemplo sin error");
+  //   noExiste;
+  //   console.log("Segundo mensaje del try");
+  // } catch (error) {
+  //   // console.log("Se ejecuta cuando existe un error");
+  //   console.log(error);
+  // } finally {
+  //   console.log("Siempre se ejecuta al final del bloque try-catch si hay o no hay error");
+  // }
+
+  // MENSAJES DE ERROR PERSONALIZADOS
+    // try {
+    //   let numero = "H";
+    //   if (isNaN(numero)) {
+    //     throw new Error("El caracter introducido no es un número")
+    //   }
+    //   console.log(numero*numero);
+    // } catch (error) {
+    //   console.log(`Se produjo el siguiente error: ${error}`);
+    // }
+
+    // DESTRUCTURACIÓN
+    // EJ SIN DESTRUCTURACIÓN
+    // const numeros = [1, 2, 3]
+    // let uno = numeros[0],
+    //     dos = numeros[1],
+    //     tres = numeros[2]
+
+    //   console.log(uno, dos, tres);
+
+    // EJ UTILIZANDO DESTRUCTURACION
+    // const [one, two, three] = numeros
+    // console.log(one, two, three);
+
+    // const persona = {
+    //   nombres: "Jimi",
+    //   apellidos: "Quintero",
+    //   edad: 47
+    // }
+
+    // let {nombres, apellidos, edad} = persona
+    // console.log(nombre, apellidos, edad);
+
+    // OBJETOS LITERALES
+    // let nombre = "Zeus",
+    //     edad = 7;
+
+    // const perro = {
+    //   nombre: nombre,
+    //   edad: edad,
+    //   ladrar: function () {
+    //     console.log("guauu guauu!!!");
+    //   }
+    // }
+
+    // console.log(perro);
+    // perro.ladrar();
+
+    // const dog = {
+    //   nombre,
+    //   edad,
+    //   raza: "MiniToy",
+    //   ladrar(){
+    //     console.log("guauu guauu guauu!!");
+    //   }
+    // }
+    // console.log(dog);
+    // dog.ladrar();
+
+    // // PARAMETROS REST
+    // function sumar(a,b,...c) {
+    //   let resultado = a + b;
+
+    //   c.forEach(function (n) {
+    //     resultado += n;
+    //   })
+
+    //   return resultado;
+    // }
+
+    // console.log(sumar(1,2));
+    // console.log(sumar(1,2,3));
+    // console.log(sumar(1,2,3,4));
+    // console.log(sumar(1,2,3,4,5));
+    // console.log(sumar(1,2,3,4,5,6));
+    // console.log(sumar(1,2,3,4,5,6,7));
+
+    // OPERADOR DE PROPAGACION O SPREAD OPERATOR
+    // let team1 = ['Oscar', 'Julian', 'Ricardo']
+    // let team2 = ['Valeria', 'Jessica', 'Camila']
+    // let education = ['david', ...team1, ...team2]
+    // console.log(education);
+
+    // const arr1 = [1, 2, 3, 4, 5],
+    //       arr2 = [6, 7, 8, 9, 0];
+
+    // const arr3 = [...arr1, ...arr2];
+    // console.log(arr3);
+
+    // ARROWS FUNCTIONS (FUNCIONES FLECHA)
+    // const saludar = function () {
+    //   console.log("Hello World");
+    // }
+    // saludar();
+
+    // CON ARROW FUNCTIONS
+    // const saludar2 = () => console.log("Hello World");
+    // saludar2();
+    // // CON ARROW FUNCTIONS CON PARAMETROS
+    // const saludar3 = (nombre) => console.log(`Hello World ${nombre}`);
+    // saludar3("Jessica");
+
+    // const numeros3 = [1, 2, 3, 4, 5];
+
+    // numeros3.forEach(function (el, index) {
+    //   console.log(`El elemento ${el} esta en la posición ${index}`);
+    // })
+
+    // numeros3.forEach((el, index) => console.log(`${el} esta en la posición ${index}`))
+
+    /***************** CLASES Y HERENCIA **************/ 
+      // class Animal {
+      //   constructor(nombre, genero) {
+      //     //Atributos
+      //     this.nombre = nombre;
+      //     this.genero = genero;
+      //   }
+      //   //Métodos
+      //   sonar() {
+      //     console.log("Hago sonidos porque estoy vivo");
+      //   }
+      //   saludar() {
+      //     console.log(`Hola me llamo ${this.nombre}`);
+      //   }
+      // }
+      
+      /**************** HERENCIA ***************/
+      // class Perro extends Animal {
+      //   constructor(nombre, genero, tamanio) {
+      //     super(nombre, genero, tamanio);
+      //     this.tamanio = tamanio;
+      //     this.raza = null;
+      //   }
+      //   sonar() {
+      //     console.log("Soy un perro y mi sonido es ladrar");
+      //   }
+      //   ladrar() {
+      //     console.log("Guauu Guauu !!!");
+      //   }
+      //   //Método estático
+      //   static queEres() {
+      //     console.log("Los perros somos animales mamiferos que pertenecen a la familia de los caninos. Somos conciderados los mejores amigos del hombre");
+      //   }
+      //   // Setters y Getters
+      //     get getRaza() {
+      //       return this.raza;
+      //     }
+      //   // Setters
+      //     set setRaza(raza) {
+      //       this.raza = raza;
+      //     }
+
+      // }
+      // Perro.queEres();
+      // const mimi = new Animal("Mimi", "hembra");
+      // const scooby = new Perro("Scooby", "Macho", "Gigante");
+
+      // console.log(mimi);
+      // mimi.sonar();
+      // mimi.saludar();
+      // console.log(scooby);
+      // scooby.sonar();
+      // scooby.saludar();
+      // scooby.ladrar();
+      // console.log(scooby.getRaza);
+      // scooby.setRaza = "Gran Danes";
+      // console.log(scooby.getRaza);
+      
+
+
+      // class Calculator {
+      //   constructor(valorA, valorB) {
+      //     this.valorA = " ";
+      //     this.valorB = " ";
+      //   }
+      //   sum(valorA, valorB) {
+      //     this.valorA = valorA;
+      //     this.valorB = valorB;
+      //     return this.valorA + this.valorB;
+      //   }
+      // }
+
+      // const calculo = new Calculator();
+      // console.log(calculo.sum(5, 8));
+
+      // OBJETO CONSOLE
+      console.log(window);
+      console.log(document);
+      console.dir(document);
+      console.log(console);
+
+      console.clear();
+
+      console.log(Date());
+
+      let fecha = new Date();
+      console.log(fecha);
+      console.log(fecha.getFullYear());
+      console.log(fecha.getDate());
+      console.log(fecha.getDay());
+      console.log(fecha.getMonth());
+      console.log(fecha.toLocaleDateString());
+      console.log(fecha.toLocaleString());
+
+      // OBJETO MATH 
+      console.log(Math);
+      console.log(Math.sqrt(4));
+      console.clear();
+      console.log(Math.abs(-7.8));
+      // Redondear cantidad hacia arriba
+      console.log(Math.ceil(7.8));
+      // Redondear cantidad hacia abajo
+      console.log(Math.floor(7.8));
+       // Redondear cantidad al más cercano
+      console.log(Math.round(4.3));
+       // Potencias
+      console.log(Math.pow(2,5));
+      // Números Aleatorios entre 0 y 1
+      console.log(Math.random());
+      // Números Aleatorios entre 0 y 1000
+      console.log(Math.random()*1000); // Con Decimales
+      console.log(Math.round(Math.random()*1000)); // Sin Decimales entero 
+      
+      // ALERT, CONFIRM, PROMPT
+      // console.clear();
+      // console.log(window);
+      // // Alert
+      // window.alert("Hola soy un alert");
+      // // Confirm
+      // window.confirm("Hola esto es una confirmación");
+      // // Prompt
+      // window.prompt("Hola esto es un prompt y le permite al usuario ingresar un valor");
+
+      // //No es necesario colocar el window
+      // // ALERT, CONFIRM, PROMPT
+      // console.clear();
+      // console.log(window);
+      // // Alert
+      // alert("Hola soy un alert");
+      // // Confirm
+      // confirm("Hola esto es una confirmación");
+      // // Prompt
+      // prompt("Hola esto es un prompt y le permite al usuario ingresar un valor");
+
+      // EXPRESIONES REGULARES
+      console.clear();
+      let cadena = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vitae nulla nibh. Pellentesque sagittis egestas doloremque. Aliquam erat volutpat. Nam."
+
+      // let expReg = new RegExp("lorem", "ig");
+      // console.log(expReg.test(cadena));
+      // console.log(expReg.exec(cadena));
+
+      let expReg2 = /lorem/ig
+      console.log(expReg2.test(cadena));
+      console.log(expReg2.exec(cadena));
+
+
+
+
+
+
+
+
+
+    </script>
+  
+</body>
+</html>

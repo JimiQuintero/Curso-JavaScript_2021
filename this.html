@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>This en JavaScript</title>
+</head>
+<body>
+  <h1>This en JavaScript</h1>
+
+
+  <script>
+    console.log(this);
+    console.log(window);
+    console.log(this === window);
+
+    // Variable en window con this
+    this.nombre = "Contexto Global"
+    console.log(this.nombre);
+
+    // this dentro de una funcion
+    function imprimir() {
+      console.log(this.nombre);
+    }
+
+    imprimir();
+
+    // this dentro de un Objeto
+    const obj = {
+      nombre: "Contexto Objeto",
+      imprimir: function () {
+        console.log(this.nombre);
+      }
+    }
+
+    obj.imprimir();
+
+    // this dentro de un arrow function 
+    const obj2 = {
+      nombre: "Contexto Objeto 2",
+      imprimir: () => console.log(this.nombre)
+    }
+
+    obj2.imprimir();
+
+    // this dentro de un objeto pero su función está declarada fuera del scope del objeto 
+    const obj3 = {
+      nombre: "Contexto Objeto 3",
+      imprimir
+    }
+
+    obj3.imprimir();
+  </script>
+
+</body>
+</html>
