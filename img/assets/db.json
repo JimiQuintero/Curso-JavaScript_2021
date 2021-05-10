@@ -44,6 +44,26 @@
       "name": "Máscara de Muerte",
       "constellation": "Cancer",
       "id": 9
+    },
+    {
+      "name": "Aioria",
+      "constellation": "Leo",
+      "id": 10
+    },
+    {
+      "name": "Shaka",
+      "constellation": "Virgo",
+      "id": 12
+    },
+    {
+      "name": "Asmita",
+      "constellation": "Virgo",
+      "id": 13
+    },
+    {
+      "name": "Ichi ",
+      "constellation": "Hidra",
+      "id": 14
     }
   ],
   "dioses": [
