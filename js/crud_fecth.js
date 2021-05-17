@@ -58,8 +58,11 @@ d.addEventListener("submit", async (e) => {
               constellation: e.target.constellation.value,
             }),
           },
-          response = await fetch("http://localhost:5000/santos", options),
-          json = response.json();
+          response = await fetch(
+            "http://localhost:5000/santos-de-bronce",
+            options
+          ),
+          json = await response.json();
 
         if (!response.ok)
           throw {
@@ -68,11 +71,11 @@ d.addEventListener("submit", async (e) => {
           };
 
         location.reload();
-      } catch (error) {
-        let message = error.statusText || "Ocurrio un error !!";
+      } catch (err) {
+        let message = err.statusText || "Ocurrio un error !!";
         $form.insertAdjacentHTML(
           "afterend",
-          `<p style="color: red"><b>Error ${error.status}: ${message}</b></p>`
+          `<p style="color: red"><b>Error ${err.status}: ${message}</b></p>`
         );
       }
     } else {
